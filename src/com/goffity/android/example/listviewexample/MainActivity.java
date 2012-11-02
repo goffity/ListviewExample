@@ -28,22 +28,23 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 
 		ListView listView = (ListView) findViewById(R.id.mylist);
-		// values = new String[] { "Android", "iPhone", "WindowsMobile",
-		// "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-		// "Linux", "OS/2" };
-		//
-		// listValue = Arrays.asList(values);
+
 		listValue = new ArrayList<String>();
 		listValue.add("Android");
 		listValue.add("iPhone");
 		listValue.add("WindowsMobile");
+		listValue.add("Blackberry");
+		listValue.add("WebOS");
+		listValue.add("Ubuntu");
+		listValue.add("Windows7");
+		listValue.add("Max OS X");
+		listValue.add("Linux");
+		listValue.add("OS/2");
 
 		// First paramenter - Context
 		// Second parameter - Layout for the row
 		// Third parameter - ID of the TextView to which the data is written
 		// Forth - the Array of data
-		// adapter = new ArrayAdapter<String>(this,
-		// android.R.layout.simple_list_item_1, android.R.id.text1, values);
 		adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_list_item_1, android.R.id.text1,
 				listValue);
