@@ -76,7 +76,6 @@ public class MainActivity extends Activity {
 	}
 
 	protected void removeListItem(View rowView, final int positon) {
-		// TODO Auto-generated method stub
 		final Animation animation = AnimationUtils.loadAnimation(
 				rowView.getContext(), R.anim.splashfadeout);
 		rowView.startAnimation(animation);
@@ -85,8 +84,6 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void run() {
-				// TODO Auto-generated method stub
-				// values.remove(positon);
 				listValue.remove(positon);
 				adapter.notifyDataSetChanged();
 				animation.cancel();
@@ -103,7 +100,6 @@ public class MainActivity extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
 		Intent intent;
 		switch (item.getItemId()) {
 		case R.id.menu_main:
