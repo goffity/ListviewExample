@@ -24,6 +24,10 @@
             android:name=".ListViewAnimSlideRight"
             android:label="@string/title_activity_list_view_anim_slide_right" >
         </activity>
+        <activity
+            android:name=".ListViewAnimationFadeOut"
+            android:label="@string/title_activity_list_view_animation_fade_out" >
+        </activity>
     </application>
 
 </manifest>

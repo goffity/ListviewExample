@@ -80,18 +80,27 @@ public class ListViewAnimSlideRight extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_list_view_anim_slide_right,
-				menu);
+		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// TODO Auto-generated method stub
+		Intent intent;
 		switch (item.getItemId()) {
 		case R.id.menu_main:
-			Intent intent = new Intent(getApplicationContext(),
-					MainActivity.class);
+			intent = new Intent(getApplicationContext(), MainActivity.class);
+			this.startActivity(intent);
+			break;
+		case R.id.menu_silde_right:
+			intent = new Intent(getApplicationContext(),
+					ListViewAnimSlideRight.class);
+			this.startActivity(intent);
+			break;
+		case R.id.menu_fade_out:
+			intent = new Intent(getApplicationContext(),
+					ListViewAnimationFadeOut.class);
 			this.startActivity(intent);
 			break;
 		default:
