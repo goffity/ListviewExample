@@ -51,7 +51,6 @@ public class ListViewAnimSlideRight extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> arparentg0, View rowView,
 					int positon, long id) {
-				// TODO Auto-generated method stub
 				removeListItem(rowView, positon);
 
 			}
@@ -59,7 +58,6 @@ public class ListViewAnimSlideRight extends Activity {
 	}
 
 	protected void removeListItem(View rowView, final int positon) {
-		// TODO Auto-generated method stub
 		final Animation animation = AnimationUtils.loadAnimation(
 				rowView.getContext(), android.R.anim.slide_out_right);
 		rowView.startAnimation(animation);
@@ -68,8 +66,6 @@ public class ListViewAnimSlideRight extends Activity {
 
 			@Override
 			public void run() {
-				// TODO Auto-generated method stub
-				// values.remove(positon);
 				listValue.remove(positon);
 				adapter.notifyDataSetChanged();
 				animation.cancel();
@@ -80,18 +76,26 @@ public class ListViewAnimSlideRight extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_list_view_anim_slide_right,
-				menu);
+		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
+		Intent intent;
 		switch (item.getItemId()) {
 		case R.id.menu_main:
-			Intent intent = new Intent(getApplicationContext(),
-					MainActivity.class);
+			intent = new Intent(getApplicationContext(), MainActivity.class);
+			this.startActivity(intent);
+			break;
+		case R.id.menu_silde_right:
+			intent = new Intent(getApplicationContext(),
+					ListViewAnimSlideRight.class);
+			this.startActivity(intent);
+			break;
+		case R.id.menu_fade_out:
+			intent = new Intent(getApplicationContext(),
+					ListViewAnimationFadeOut.class);
 			this.startActivity(intent);
 			break;
 		default:

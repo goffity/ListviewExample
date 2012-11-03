@@ -6,5 +6,7 @@
     <string name="title_activity_main">ListViewAnimation</string>
     <string name="title_activity_list_view_anim_slide_right">ListViewAnimSlideRight</string>
     <string name="menu_slide_right">Slide Right</string>
+    <string name="title_activity_list_view_animation_fade_out">ListViewAnimationFadeOut</string>
+    <string name="menu_fade_out">Fade Out</string>
 
 </resources>
